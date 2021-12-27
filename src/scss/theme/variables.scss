@@ -1,0 +1,30 @@
+// Color Palette
+$color-1: #1a202c;
+$color-2: #a3c0bb;
+$color-3: #edca76;
+$color-4: #dedba7;
+$color-5: #ee7a55;
+
+// Basic colors
+$white: #fff;
+$black: #000;
+
+$body-bg: $color-4;
+
+$primary: $color-5;
+$secondary: $color-1;
+$info: $color-2;
+$extra: $color-3;
+
+$extra-colors: (
+  "extra": $extra,
+);
+
+@import "../../../node_modules/bootstrap/scss/variables";
+
+$theme-colors: map-merge(
+  $map1: $theme-colors,
+  $map2: $extra-colors,
+);
+
+$utilities-bg-colors: map-merge($utilities-bg-colors, $theme-colors);

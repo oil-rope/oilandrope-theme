@@ -1,0 +1,43 @@
+{
+  "title": "Oil & Rope Theme",
+  "name": "oilandrope-theme",
+  "version": "0.0.1",
+  "description": "An open source Bootstrap theme for Oil & Rope.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --style compressed --error-css --no-source-map src/scss/entrypoint.scss:vendor/css/oilandrope.css",
+    "compile:dev": "sass --style expanded --error-css --source-map --watch --color src/scss/entrypoint.scss:dist/css/oilandrope.css",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oil-rope/oilandrope-theme.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template",
+    "oilandrope",
+    "rol",
+    "roleplay"
+  ],
+  "author": "Oil & Rope Team",
+  "contributors": [
+    "LeCuay <suso.becerra98@gmail.com> (https://lecuay.github.io/)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oil-rope/oilandrope-theme/issues",
+    "email": "oilandropeteam@gmail.com"
+  },
+  "homepage": "https://github.com/oil-rope/oilandrope-theme#readme",
+  "dependencies": {
+    "bootstrap": "5.1"
+  },
+  "devDependencies": {
+    "sass": "^1.45.1"
+  }
+}
