@@ -1,20 +1,66 @@
-// Color Palette
-$color-1: #1a202c;
-$color-2: #a3c0bb;
-$color-3: #edca76;
-$color-4: #dedba7;
-$color-5: #ee7a55;
+// As hex codes */
+
+$color-primary-0: #ee7a55; // Main Primary color */
+$color-primary-1: #ffbea9;
+$color-primary-2: #ff9d7e;
+$color-primary-3: #d75830;
+$color-primary-4: #ac3a16;
+
+$color-secondary-1-0: #eea955; // Main Secondary color (1) */
+$color-secondary-1-1: #ffd8a9;
+$color-secondary-1-2: #ffc57e;
+$color-secondary-1-3: #d78c30;
+$color-secondary-1-4: #ac6916;
+
+$color-secondary-2-0: #3c7598; // Main Secondary color (2) */
+$color-secondary-2-1: #8fb9d2;
+$color-secondary-2-2: #5c92b1;
+$color-secondary-2-3: #246489;
+$color-secondary-2-4: #134c6e;
+
+$color-complement-0: #3ca770; // Main Complement color */
+$color-complement-1: #90dab5;
+$color-complement-2: #5ebf8e;
+$color-complement-3: #21975b;
+$color-complement-4: #0f7943;
+
+// As RGBa codes */
+
+$rgba-primary-0: rgba(238, 122, 85, 1); // Main Primary color */
+$rgba-primary-1: rgba(255, 190, 169, 1);
+$rgba-primary-2: rgba(255, 157, 126, 1);
+$rgba-primary-3: rgba(215, 88, 48, 1);
+$rgba-primary-4: rgba(172, 58, 22, 1);
+
+$rgba-secondary-1-0: rgba(238, 169, 85, 1); // Main Secondary color (1) */
+$rgba-secondary-1-1: rgba(255, 216, 169, 1);
+$rgba-secondary-1-2: rgba(255, 197, 126, 1);
+$rgba-secondary-1-3: rgba(215, 140, 48, 1);
+$rgba-secondary-1-4: rgba(172, 105, 22, 1);
+
+$rgba-secondary-2-0: rgba(60, 117, 152, 1); // Main Secondary color (2) */
+$rgba-secondary-2-1: rgba(143, 185, 210, 1);
+$rgba-secondary-2-2: rgba(92, 146, 177, 1);
+$rgba-secondary-2-3: rgba(36, 100, 137, 1);
+$rgba-secondary-2-4: rgba(19, 76, 110, 1);
+
+$rgba-complement-0: rgba(60, 167, 112, 1); // Main Complement color */
+$rgba-complement-1: rgba(144, 218, 181, 1);
+$rgba-complement-2: rgba(94, 191, 142, 1);
+$rgba-complement-3: rgba(33, 151, 91, 1);
+$rgba-complement-4: rgba(15, 121, 67, 1);
 
 // Basic colors
 $white: #fff;
 $black: #000;
 
-$body-bg: $color-4;
+$body-bg: #dedba7;
 
-$primary: $color-5;
-$secondary: $color-1;
-$info: $color-2;
-$extra: $color-3;
+$primary: $color-primary-0;
+$secondary: $color-secondary-1-0;
+$success: $color-complement-0;
+$info: $color-secondary-2-1;
+$extra: $color-complement-1;
 
 $extra-colors: (
   "extra": $extra,

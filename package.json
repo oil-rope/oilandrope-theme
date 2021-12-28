@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/oil-rope/oilandrope-theme#readme",
   "dependencies": {
-    "bootstrap": "5.1"
+    "bootstrap": "^5.1.3"
   },
   "devDependencies": {
     "sass": "^1.45.1"
