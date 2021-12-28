@@ -8,6 +8,12 @@
     <meta name="description" content="Oil &amp; Rope Theme" />
     <meta name="author" content="Oil &amp; Rope Team" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./dist/css/oilandrope.css" />
 
     <title>Oil & Rope Theme</title>
@@ -92,7 +98,7 @@
           </div>
         </section>
 
-        <section class="row">
+        <section class="row mb-5">
           <h2>Components with color</h2>
           <div class="col-md-6">
             <div class="card">
@@ -196,10 +202,62 @@
                 <button type="button" class="btn btn-extra m-1">Extra</button>
                 <button type="button" class="btn btn-light m-1">Light</button>
                 <button type="button" class="btn btn-dark m-1">Dark</button>
+                <!-- link-$color is thanks to bootstap/helpers -->
+                <a href="#" class="btn btn-link btn-outline-primary link-dark">
+                  Link
+                </a>
               </div>
             </div>
           </div>
         </section>
+
+        <div class="row mb-5">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">Forms</div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                    />
+                    <div id="emailHelp" class="form-text">
+                      We'll never share your email with anyone else.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                    />
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >Check me out</label
+                    >
+                  </div>
+                  <button type="reset" class="btn btn-dark">Reset</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer></footer>

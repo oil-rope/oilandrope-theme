@@ -5,7 +5,9 @@
   "description": "An open source Bootstrap theme for Oil & Rope.",
   "main": "index.js",
   "scripts": {
-    "compile": "sass --style compressed --error-css --no-source-map src/scss/entrypoint.scss:vendor/css/oilandrope.css",
+    "build": "npm-run-all compile compile-min",
+    "compile": "sass --style expanded --error-css --no-source-map src/scss/entrypoint.scss:vendor/css/oilandrope.css",
+    "compile-min": "sass --style compressed --error-css --no-source-map src/scss/entrypoint.scss:vendor/css/oilandrope.min.css",
     "compile:dev": "sass --style expanded --error-css --source-map --watch --color src/scss/entrypoint.scss:dist/css/oilandrope.css",
     "test": "test"
   },
@@ -38,6 +40,7 @@
     "bootstrap": "^5.1.3"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "sass": "^1.45.1"
   }
 }

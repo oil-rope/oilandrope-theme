@@ -24,33 +24,8 @@ $color-complement-2: #5ebf8e;
 $color-complement-3: #21975b;
 $color-complement-4: #0f7943;
 
-// As RGBa codes */
+// Color system
 
-$rgba-primary-0: rgba(238, 122, 85, 1); // Main Primary color */
-$rgba-primary-1: rgba(255, 190, 169, 1);
-$rgba-primary-2: rgba(255, 157, 126, 1);
-$rgba-primary-3: rgba(215, 88, 48, 1);
-$rgba-primary-4: rgba(172, 58, 22, 1);
-
-$rgba-secondary-1-0: rgba(238, 169, 85, 1); // Main Secondary color (1) */
-$rgba-secondary-1-1: rgba(255, 216, 169, 1);
-$rgba-secondary-1-2: rgba(255, 197, 126, 1);
-$rgba-secondary-1-3: rgba(215, 140, 48, 1);
-$rgba-secondary-1-4: rgba(172, 105, 22, 1);
-
-$rgba-secondary-2-0: rgba(60, 117, 152, 1); // Main Secondary color (2) */
-$rgba-secondary-2-1: rgba(143, 185, 210, 1);
-$rgba-secondary-2-2: rgba(92, 146, 177, 1);
-$rgba-secondary-2-3: rgba(36, 100, 137, 1);
-$rgba-secondary-2-4: rgba(19, 76, 110, 1);
-
-$rgba-complement-0: rgba(60, 167, 112, 1); // Main Complement color */
-$rgba-complement-1: rgba(144, 218, 181, 1);
-$rgba-complement-2: rgba(94, 191, 142, 1);
-$rgba-complement-3: rgba(33, 151, 91, 1);
-$rgba-complement-4: rgba(15, 121, 67, 1);
-
-// Basic colors
 $white: #fff;
 $black: #000;
 
@@ -66,6 +41,15 @@ $extra-colors: (
   "extra": $extra,
 );
 
+// Custom font
+$font-ds-regular: "Dancing Script", cursive;
+
+// Background for inputs (Forms)
+$input-bg: transparent;
+$input-focus-bg: tint-color($primary, 90%);
+
+// NOTE: This is done 'cause variables need to be loaded in order
+// to access $theme-colors
 @import "../../../node_modules/bootstrap/scss/variables";
 
 $theme-colors: map-merge(
@@ -74,3 +58,14 @@ $theme-colors: map-merge(
 );
 
 $utilities-bg-colors: map-merge($utilities-bg-colors, $theme-colors);
+
+// Border color for inputs (Forms)
+$input-border-color: map-get(
+  $map: $theme-colors,
+  $key: "secondary",
+);
+
+$input-border-radius: none;
+$input-border-radius-lg: none;
+$input-border-radius-sm: none;
+$input-focus-box-shadow: none;
