@@ -41,6 +41,14 @@ $extra-colors: (
   "extra": $extra,
 );
 
+// Options
+// https://getbootstrap.com/docs/5.1/customize/options/
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-cssgrid: true;
+$enable-rfs: true;
+
 // Custom font
 $font-ds-regular: "Dancing Script", cursive;
 
@@ -66,6 +74,4 @@ $input-border-color: map-get(
 );
 
 $input-border-radius: none;
-$input-border-radius-lg: none;
-$input-border-radius-sm: none;
 $input-focus-box-shadow: none;
