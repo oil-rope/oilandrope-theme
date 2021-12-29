@@ -54,7 +54,7 @@ $font-ds-regular: "Dancing Script", cursive;
 
 // Background for inputs (Forms)
 $input-bg: transparent;
-$input-focus-bg: tint-color($primary, 90%);
+$input-focus-bg: lighten($primary, 32%);
 
 // NOTE: This is done 'cause variables need to be loaded in order
 // to access $theme-colors
@@ -65,8 +65,6 @@ $theme-colors: map-merge(
   $map2: $extra-colors,
 );
 
-$utilities-bg-colors: map-merge($utilities-bg-colors, $theme-colors);
-
 // Border color for inputs (Forms)
 $input-border-color: map-get(
   $map: $theme-colors,
@@ -74,4 +72,6 @@ $input-border-color: map-get(
 );
 
 $input-border-radius: none;
+$input-border-radius-lg: none;
+$input-border-radius-sm: none;
 $input-focus-box-shadow: none;
