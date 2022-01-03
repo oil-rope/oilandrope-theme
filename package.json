@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm-run-all compile compile-min",
     "compile": "sass --style expanded --error-css --no-source-map src/scss/entrypoint.scss:vendor/css/oilandrope.css",
-    "compile-min": "sass --style compressed --error-css --no-source-map src/scss/entrypoint.scss:vendor/css/oilandrope.min.css",
+    "compile:min": "sass --style compressed --error-css --no-source-map src/scss/entrypoint.scss:vendor/css/oilandrope.min.css",
     "compile:dev": "sass --style expanded --error-css --source-map --watch --color src/scss/entrypoint.scss:dist/css/oilandrope.css",
     "test": "test"
   },

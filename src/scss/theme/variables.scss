@@ -62,7 +62,21 @@ $input-border-radius-lg: none;
 $input-border-radius-sm: none;
 $input-border-color: $secondary;
 $input-focus-border-color: $extra;
+
+$custom-control-indicator-checked-border-color: $color-primary-1;
 $custom-file-border-color: $color-secondary-1-3;
+
+$custom-range-track-bg: $color-primary-1;
+$custom-range-thumb-active-bg: $extra;
+
+$custom-file-text: (
+  en: "Browse",
+  es: "Elegir",
+);
+
+// Utilities
+
+$overflows: auto, hidden, scroll;
 
 // NOTE: This is done 'cause variables need to be loaded in order
 // to access $theme-colors, $spacer, etc
@@ -75,3 +89,5 @@ $theme-colors: map-merge(
 );
 // Typography
 $hr-margin-x: $spacer;
+// Buttons + Forms
+$custom-control-indicator-bg: $white;
