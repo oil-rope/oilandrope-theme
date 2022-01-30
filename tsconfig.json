@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES3",
+    "lib": ["DOM", "ES2021"],
+    "jsx": "react",
+    "module": "ESNext",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "paths": {
+      "@Components/*": ["components/*"],
+      "@Root/*": ["./*"],
+    },
+    "outDir": "./vendor/",
+    "newLine": "lf",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  }
+}

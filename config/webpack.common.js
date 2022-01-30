@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -7,10 +8,11 @@ const SOURCE_PATH = path.join(BASE_PATH, 'src/');
 
 module.exports = {
   entry: {
-    oilandropetheme: './src/index.jsx',
+    oilandropetheme: './src/index.tsx',
   },
   output: {
     path: path.join(BASE_PATH, 'vendor/'),
+    filename: '[name].bundle.js',
     chunkFilename: '[name].[contenthash:8].bundle.js',
     clean: true,
   },
@@ -26,23 +28,31 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(jsx)$/,
-        use: 'babel-loader',
+        test: /\.(ts|tsx)$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
-        test: /\.(scss)$/,
+        test: /\.(scss|css)$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[name][ext][query]',
+        },
       },
     ],
   },
   performance: {
-    assetFilter: (assetFilename) => !/\.(map|css)$/.test(assetFilename),
+    assetFilter: (assetFilename) => !/\.(map|css|png)$/.test(assetFilename),
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.scss'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
     alias: {
-      Components: path.join(SOURCE_PATH, 'components/'),
+      '@Components': path.join(SOURCE_PATH, 'components/'),
+      '@Root': SOURCE_PATH,
     },
   },
 };
