@@ -1,9 +1,12 @@
 import Loader from '@Components/Loader';
 import React, { FC, Fragment, lazy, Suspense } from 'react';
 
+import { COLORS } from '@Root/OARConstants';
+
 const ProgressBar = lazy(
   () => import('@Components/main/components/ProgressBar'),
 );
+const Button = lazy(() => import('@Components/main/components/Button'));
 
 const ComponentsWithColor: FC = () => {
   const progressBars = {
@@ -40,7 +43,21 @@ const ComponentsWithColor: FC = () => {
         <div className="col-md-6">
           <div className="card">
             <div className="card-header">Buttons</div>
-            <div className="card-body"></div>
+            <div className="card-body">
+              {[...COLORS, 'link'].map((value, index) => (
+                <Suspense
+                  key={index}
+                  fallback={
+                    <Loader
+                      text="Loading button..."
+                      color={value === 'link' ? 'primary' : value}
+                    />
+                  }
+                >
+                  <Button color={value} />
+                </Suspense>
+              ))}
+            </div>
           </div>
         </div>
       </section>
