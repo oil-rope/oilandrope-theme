@@ -7,4 +7,7 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   optimization: { moduleIds: 'named' },
+  devServer: {
+    historyApiFallback: true,
+  },
 });

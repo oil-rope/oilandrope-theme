@@ -1,7 +1,7 @@
 import React, { FC, Fragment } from 'react';
 import PropTypes, { InferProps } from 'prop-types';
 
-import { COLORS } from '@Root/OARConstants';
+import { COLORS } from '@/OARConstants';
 
 const ProgressBarPropTypes = {
   color: PropTypes.oneOf(COLORS).isRequired,

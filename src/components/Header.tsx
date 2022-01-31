@@ -1,5 +1,9 @@
 import React, { FC } from 'react';
 
+import Menu from '@Components/header/Menu';
+
+import { MENUS } from '@/OARConstants';
+
 const Header: FC = () => {
   return (
     <header>
@@ -17,23 +21,7 @@ const Header: FC = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarOilAndRopeTheme">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a href="#" className="nav-link active" aria-current="page">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="forms.html" className="nav-link" aria-current="page">
-                  Forms &amp; Buttons
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="tables.html" className="nav-link" aria-current="page">
-                  Tables
-                </a>
-              </li>
-            </ul>
+            <Menu menus={MENUS} />
           </div>
         </div>
       </nav>

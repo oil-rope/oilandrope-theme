@@ -15,6 +15,7 @@ module.exports = {
     filename: '[name].bundle.js',
     chunkFilename: '[name].[contenthash:8].bundle.js',
     clean: true,
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -43,6 +44,13 @@ module.exports = {
           filename: 'img/[name][ext][query]',
         },
       },
+      {
+        test: /\.(ttf|eot|woff)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext][query]',
+        },
+      },
     ],
   },
   performance: {
@@ -51,8 +59,9 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
     alias: {
+      '@': SOURCE_PATH,
       '@Components': path.join(SOURCE_PATH, 'components/'),
-      '@Root': SOURCE_PATH,
+      '@Icons': path.join(SOURCE_PATH, 'icons/'),
     },
   },
 };

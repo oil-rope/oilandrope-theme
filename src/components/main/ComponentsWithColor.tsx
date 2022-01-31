@@ -1,7 +1,7 @@
 import Loader from '@Components/Loader';
 import React, { FC, Fragment, lazy, Suspense } from 'react';
 
-import { COLORS } from '@Root/OARConstants';
+import { COLORS } from '@/OARConstants';
 
 const ProgressBar = lazy(
   () => import('@Components/main/components/ProgressBar'),

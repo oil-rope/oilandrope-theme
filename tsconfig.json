@@ -8,8 +8,9 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "paths": {
+      "@/*": ["./*"],
       "@Components/*": ["components/*"],
-      "@Root/*": ["./*"],
+      "@Icons/*": ["icons/*"]
     },
     "outDir": "./vendor/",
     "newLine": "lf",

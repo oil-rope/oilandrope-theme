@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import PropTypes, { InferProps } from 'prop-types';
 
-import { COLORS } from '@Root/OARConstants';
+import { COLORS } from '@/OARConstants';
 
 const ButtonPropTypes = {
   color: PropTypes.oneOf([...COLORS, 'link']).isRequired,

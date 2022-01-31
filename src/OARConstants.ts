@@ -9,3 +9,8 @@ export const COLORS = [
   'dark',
   'light',
 ];
+
+export const MENUS = [
+  { name: 'Home', link: '/' },
+  { name: 'Icons', link: '/icons' },
+];
