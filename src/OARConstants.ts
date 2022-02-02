@@ -1,3 +1,5 @@
+import IconsJSON from '@Icons/selection.json';
+
 export const COLORS = [
   'primary',
   'secondary',
@@ -14,3 +16,5 @@ export const MENUS = [
   { name: 'Home', link: '/' },
   { name: 'Icons', link: '/icons' },
 ];
+
+export const ICONS = IconsJSON.icons.map((icon) => icon.properties.name);
