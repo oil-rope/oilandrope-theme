@@ -39,7 +39,7 @@ jobs:
         run: npm test
 
       - name: Updating Codecov (coverage)
-        if: ${{ success() && matrix.node.version==16.x }}
+        if: ${{ success() && matrix.node.version>=16 }}
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
