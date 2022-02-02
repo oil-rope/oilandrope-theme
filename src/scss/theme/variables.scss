@@ -80,7 +80,7 @@ $overflows: auto, hidden, scroll;
 
 // NOTE: This is done 'cause variables need to be loaded in order
 // to access $theme-colors, $spacer, etc
-@import "../../../node_modules/bootstrap/scss/variables";
+@import "~bootstrap/scss/variables";
 
 // Color system
 $theme-colors: map-merge(

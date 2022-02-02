@@ -2,7 +2,7 @@ import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import './scss/entrypoint';
+import './scss/entrypoint.scss';
 
 import App from '@Components/App';
 

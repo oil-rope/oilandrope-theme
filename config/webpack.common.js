@@ -57,7 +57,7 @@ module.exports = {
     assetFilter: (assetFilename) => !/\.(map|css|png)$/.test(assetFilename),
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       '@': SOURCE_PATH,
       '@Components': path.join(SOURCE_PATH, 'components/'),

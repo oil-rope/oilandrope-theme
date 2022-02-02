@@ -37,3 +37,11 @@ jobs:
 
       - name: Tests
         run: npm test
+
+      - name: Updating Codecov (coverage)
+        if: ${{ success() && matrix.node.version>=16 }}
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+          file: ./coverage/clover.xml
