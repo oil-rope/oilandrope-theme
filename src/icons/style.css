@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Oil-and-Rope';
-  src:  url('fonts/Oil-and-Rope.eot?u8muis');
-  src:  url('fonts/Oil-and-Rope.eot?u8muis#iefix') format('embedded-opentype'),
-    url('fonts/Oil-and-Rope.ttf?u8muis') format('truetype'),
-    url('fonts/Oil-and-Rope.woff?u8muis') format('woff'),
-    url('fonts/Oil-and-Rope.svg?u8muis#Oil-and-Rope') format('svg');
+  src:  url('fonts/Oil-and-Rope.eot?e70mc9');
+  src:  url('fonts/Oil-and-Rope.eot?e70mc9#iefix') format('embedded-opentype'),
+    url('fonts/Oil-and-Rope.ttf?e70mc9') format('truetype'),
+    url('fonts/Oil-and-Rope.woff?e70mc9') format('woff'),
+    url('fonts/Oil-and-Rope.svg?e70mc9#Oil-and-Rope') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,75 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-tundra:before {
+  content: "\e933";
+}
+.ic-unusual:before {
+  content: "\e936";
+}
+.ic-sea:before {
+  content: "\e932";
+}
+.ic-tv:before {
+  content: "\e91d";
+}
+.ic-eye:before {
+  content: "\e91e";
+}
+.ic-responsive-device:before {
+  content: "\e914";
+}
+.ic-triangle-relation:before {
+  content: "\e90d";
+}
+.ic-diana:before {
+  content: "\e90c";
+}
+.ic-globe:before {
+  content: "\e900";
+}
+.ic-island:before {
+  content: "\e937";
+}
+.ic-village:before {
+  content: "\e92d";
+}
+.ic-city:before {
+  content: "\e92e";
+}
+.ic-air:before {
+  content: "\e935";
+}
+.ic-continent:before {
+  content: "\e92f";
+}
+.ic-forest:before {
+  content: "\e938";
+}
+.ic-send:before {
+  content: "\e92a";
+}
+.ic-dots-horizontal-triple:before {
+  content: "\e91b";
+}
+.ic-menu-thin:before {
+  content: "\e917";
+}
+.ic-circle-cross-thin:before {
+  content: "\e918";
+}
+.ic-cross-thin:before {
+  content: "\e919";
+}
+.ic-mountain:before {
+  content: "\e930";
+}
+.ic-desert:before {
+  content: "\e934";
+}
+.ic-mines:before {
+  content: "\e931";
+}
 .ic-google:before {
   content: "\e92c";
 }
@@ -106,7 +175,7 @@
 .ic-home:before {
   content: "\e902";
 }
-.ic-city:before {
+.ic-metropolis:before {
   content: "\e903";
 }
 .ic-edit:before {
@@ -141,37 +210,4 @@
 }
 .ic-discord:before {
   content: "\e916";
-}
-.ic-tv:before {
-  content: "\e91d";
-}
-.ic-eye:before {
-  content: "\e91e";
-}
-.ic-responsive-device:before {
-  content: "\e914";
-}
-.ic-triangle-relation:before {
-  content: "\e90d";
-}
-.ic-diana:before {
-  content: "\e90c";
-}
-.ic-globe:before {
-  content: "\e900";
-}
-.ic-send:before {
-  content: "\e92a";
-}
-.ic-dots-horizontal-triple:before {
-  content: "\e91b";
-}
-.ic-menu-thin:before {
-  content: "\e917";
-}
-.ic-circle-cross-thin:before {
-  content: "\e918";
-}
-.ic-cross-thin:before {
-  content: "\e919";
 }
