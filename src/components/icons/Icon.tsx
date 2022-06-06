@@ -4,7 +4,7 @@ import PropTypes, { InferProps } from 'prop-types';
 import { ICONS } from '@/OARConstants';
 
 const IconPropTypes = {
-  icon: PropTypes.oneOf(ICONS),
+  icon: PropTypes.oneOf(ICONS).isRequired,
 };
 
 type IconTypes = InferProps<typeof IconPropTypes>;

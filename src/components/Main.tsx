@@ -7,6 +7,8 @@ const ComponentsWithColor = lazy(
   () => import('@Components/main/ComponentsWithColor'),
 );
 const TextExamples = lazy(() => import('@Components/main/TextExamples'));
+const Custom = lazy(() => import('@Components/main/Custom'));
+const NavTab = lazy(() => import('@Components/main/NavTab'));
 
 const Main: FC = () => {
   return (
@@ -23,6 +25,14 @@ const Main: FC = () => {
 
         <Suspense fallback={<Loader text="Loading text examples..." />}>
           <TextExamples />
+        </Suspense>
+
+        <Suspense fallback={<Loader text="Loading custom..." />}>
+          <Custom />
+        </Suspense>
+
+        <Suspense fallback={<Loader text="Loading nav tab..." />}>
+          <NavTab />
         </Suspense>
       </div>
     </main>
