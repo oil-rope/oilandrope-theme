@@ -33,8 +33,11 @@ $extra-colors: (
   "extra": $extra,
 );
 
+// Prefix for variables
+$prefix: oar-;
+
 // Options
-// https://getbootstrap.com/docs/5.1/customize/options/
+// https://getbootstrap.com/docs/5.2/customize/options/
 $enable-rounded: true;
 $enable-shadows: false;
 $enable-gradients: false;
@@ -55,30 +58,38 @@ $input-btn-padding-x: 1rem;
 $input-btn-border-width: 2px;
 
 $input-bg: transparent;
-$input-focus-box-shadow: none;
+
+$input-border-color: var(--#{$prefix}secondary);
+
 $input-border-radius: none;
-$input-border-radius-lg: none;
 $input-border-radius-sm: none;
-$input-border-color: $secondary;
-$input-focus-border-color: $extra;
+$input-border-radius-lg: none;
+
+$input-focus-box-shadow: none;
+$input-focus-border-color: var(--#{$prefix}extra);
 
 $custom-control-indicator-checked-border-color: $color-primary-1;
 $custom-file-border-color: $color-secondary-1-3;
 
-$custom-range-track-bg: $color-primary-1;
-$custom-range-thumb-active-bg: $extra;
+$form-range-track-bg: $color-primary-1;
+
+$form-range-thumb-active-bg: var(--#{$prefix}extra);
 
 $custom-file-text: (
   en: "Browse",
   es: "Elegir",
 );
 
+// Accordion
+
+$accordion-border-color: var(--#{$prefix}gray-600);
+
 // Navs & tabs
 
-$nav-tabs-border-color: $primary;
-$nav-tabs-link-hover-border-color: $secondary;
-$nav-tabs-link-active-bg: $body-bg;
-$nav-tabs-link-active-border-color: $primary $primary $nav-tabs-link-active-bg;
+$nav-tabs-border-color: var(--#{$prefix}primary);
+$nav-tabs-link-hover-border-color: var(--#{$prefix}secondary);
+$nav-tabs-link-active-bg: var(--#{$prefix}body-bg);
+$nav-tabs-link-active-border-color: var(--#{$prefix}primary) var(--#{$prefix}primary) $nav-tabs-link-active-bg;
 
 // Utilities
 
@@ -88,7 +99,7 @@ $overflows: auto, hidden, scroll;
 $theme-colors: map-merge($theme-colors, $extra-colors);
 
 // Typography
-$hr-margin-x: $spacer;
+$hr-margin-x: var(--#{$prefix}spacer);
 
 // Buttons + Forms
-$custom-control-indicator-bg: $white;
+$custom-control-indicator-bg: var(--#{$prefix}white);

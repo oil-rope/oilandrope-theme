@@ -9,6 +9,8 @@ const ComponentsWithColor = lazy(
 const TextExamples = lazy(() => import('@Components/main/TextExamples'));
 const Custom = lazy(() => import('@Components/main/Custom'));
 const NavTab = lazy(() => import('@Components/main/NavTab'));
+const Accordion = lazy(() => import('@Components/main/Accordion'));
+const Form = lazy(() => import('@Components/main/Form'));
 
 const Main: FC = () => {
   return (
@@ -33,6 +35,14 @@ const Main: FC = () => {
 
         <Suspense fallback={<Loader text="Loading nav tab..." />}>
           <NavTab />
+        </Suspense>
+
+        <Suspense fallback={<Loader text="Loading accordion..." />}>
+          <Accordion />
+        </Suspense>
+
+        <Suspense fallback={<Loader text="Loading form..." />}>
+          <Form />
         </Suspense>
       </div>
     </main>
