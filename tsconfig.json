@@ -12,7 +12,7 @@
       "@Components/*": ["components/*"],
       "@Icons/*": ["icons/*"]
     },
-    "outDir": "./vendor/",
+    "outDir": "./dist/",
     "newLine": "lf",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

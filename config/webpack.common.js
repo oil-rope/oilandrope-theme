@@ -11,7 +11,7 @@ module.exports = {
     oilandropetheme: './src/index.tsx',
   },
   output: {
-    path: path.join(BASE_PATH, 'vendor/'),
+    path: path.join(BASE_PATH, 'dist/'),
     filename: '[name].bundle.js',
     chunkFilename: '[name].[contenthash:8].bundle.js',
     clean: true,
