@@ -1,10 +1,11 @@
 import React, { FC, lazy, Suspense } from 'react';
 
 import Loader from '@Components/Loader';
-import { ICONS } from '@/OARConstants';
+import { ICONS, BOOTSTRAP_ICONS } from '@/OARConstants';
 import '@Icons/style.css';
 
 const Icon = lazy(() => import('@Components/icons/Icon'));
+const BootstrapIcon = lazy(() => import('@Components/icons/BootstrapIcon'));
 
 const Icons: FC = () => {
   return (
@@ -30,6 +31,14 @@ const Icons: FC = () => {
                       fallback={<Loader text={`Loading ${value}...`} />}
                     >
                       <Icon icon={value} />
+                    </Suspense>
+                  ))}
+                  {BOOTSTRAP_ICONS.map((value, index) => (
+                    <Suspense
+                      key={index}
+                      fallback={<Loader text={`Loading ${value}...`} />}
+                    >
+                      <BootstrapIcon icon={value} />
                     </Suspense>
                   ))}
                 </tbody>

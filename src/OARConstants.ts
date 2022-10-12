@@ -1,4 +1,5 @@
 import IconsJSON from '@Icons/selection.json';
+import BootstrapIcons from 'bootstrap-icons/font/bootstrap-icons.json';
 
 export const COLORS = [
   'primary',
@@ -18,3 +19,4 @@ export const MENUS = [
 ];
 
 export const ICONS = IconsJSON.icons.map((icon) => icon.properties.name);
+export const BOOTSTRAP_ICONS = Object.keys(BootstrapIcons);

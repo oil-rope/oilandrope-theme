@@ -12,8 +12,8 @@ module.exports = {
   },
   output: {
     path: path.join(BASE_PATH, 'dist/'),
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].[contenthash:8].bundle.js',
+    filename: '[name].[contenthash].bundle.js',
+    chunkFilename: '[name].[contenthash].bundle.js',
     clean: true,
     publicPath: '/',
   },
@@ -30,7 +30,7 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        use: 'ts-loader',
+        use: 'ts-loader?configFile=tsconfig.webpack.json',
         exclude: /node_modules/,
       },
       {

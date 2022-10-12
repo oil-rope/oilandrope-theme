@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import './scss/entrypoint.scss';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import App from '@Components/App';
 
