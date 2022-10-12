@@ -20,5 +20,6 @@ FROM nginx:1.23-alpine
 RUN apk add vim
 
 COPY --from=NODE_BUILD --chown=nginx:www-data /app/dist/ /usr/share/nginx/html/
+COPY ./docker/nginx/templates /etc/nginx/templates
 
 WORKDIR /etc/nginx/
