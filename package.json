@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode=development --progress --config ./config/webpack/webpack.config.js",
-    "build": "webpack --config ./config/webpack/webpack.prod.js --progress",
+    "build": "webpack --mode=production --progress --config ./config/webpack/webpack.config.js",
     "lint": "eslint --color .",
     "lint:fix": "eslint --fix .",
     "test": "jest"

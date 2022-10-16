@@ -2,7 +2,9 @@ import React, { FC, lazy, Suspense } from 'react';
 
 import Loader from '@Components/Loader';
 import { ICONS, BOOTSTRAP_ICONS } from '@/OARConstants';
+
 import '@Icons/style.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Icon = lazy(() => import('@Components/icons/Icon'));
 const BootstrapIcon = lazy(() => import('@Components/icons/BootstrapIcon'));
