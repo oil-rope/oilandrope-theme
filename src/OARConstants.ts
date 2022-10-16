@@ -13,9 +13,10 @@ export const COLORS = [
   'light',
 ];
 
-export const MENUS = [
+export const MENUS: Array<{ name: string; link: string }> = [
   { name: 'Home', link: '/' },
   { name: 'Icons', link: '/icons' },
+  { name: 'Forms', link: '/forms' },
 ];
 
 export const ICONS = IconsJSON.icons.map((icon) => icon.properties.name);

@@ -17,6 +17,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'warn',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
   },
   settings: {
     react: {
