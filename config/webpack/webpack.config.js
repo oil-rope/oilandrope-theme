@@ -27,6 +27,7 @@ const webpackConf = {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/oilandrope.css',
+      chunkFilename: 'css/[id].[contenthash].css',
     }),
   ],
   module: {
