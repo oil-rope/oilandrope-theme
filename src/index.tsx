@@ -4,6 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './scss/entrypoint.scss';
 
+import '@Icons/style.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 import App from '@Components/App';
 
 const rootElement = document.getElementById('root');
