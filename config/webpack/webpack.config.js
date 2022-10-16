@@ -106,12 +106,14 @@ module.exports = (_env, argv) => {
     webpackConf.optimization = { moduleIds: 'named' };
     webpackConf.devServer = {
       historyApiFallback: true,
+      liveReload: true,
       client: {
         overlay: true,
       },
       host: '127.0.0.1',
       port: 8080,
       open: true,
+      watchFiles: { paths: SOURCE_PATH },
     };
   }
   return webpackConf;
