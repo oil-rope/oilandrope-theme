@@ -17,6 +17,7 @@ export const MENUS: Array<{ name: string; link: string }> = [
   { name: 'Home', link: '/' },
   { name: 'Icons', link: '/icons' },
   { name: 'Forms', link: '/forms' },
+  { name: 'Navs & Tabs', link: '/navs-and-tabs' },
 ];
 
 export const ICONS = IconsJSON.icons.map((icon) => icon.properties.name);

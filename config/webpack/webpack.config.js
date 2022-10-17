@@ -113,6 +113,10 @@ module.exports = (_env, argv) => {
       host: '127.0.0.1',
       port: 8080,
       open: true,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET,OPTIONS',
+      },
       watchFiles: { paths: SOURCE_PATH },
     };
   }

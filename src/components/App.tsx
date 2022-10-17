@@ -7,6 +7,7 @@ import Loader from '@Components/Loader';
 const Main = lazy(() => import('@Components/Main'));
 const Icons = lazy(() => import('@Components/Icons'));
 const Forms = lazy(() => import('@Components/Forms'));
+const NavsAndTabs = lazy(() => import('@Components/NavsAndTabs'));
 
 const App: FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: FC = () => {
         <Route path="/" element={<Main />} />
         <Route path="/icons" element={<Icons />} />
         <Route path="/forms" element={<Forms />} />
+        <Route path="/navs-and-tabs" element={<NavsAndTabs />} />
         <Route
           path="*"
           element={<h1 className="display-1 text-center">Item not found</h1>}

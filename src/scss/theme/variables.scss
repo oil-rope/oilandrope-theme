@@ -76,6 +76,11 @@ $custom-file-text: (
 // Accordion
 $accordion-border-color: $secondary;
 
+// Navs & Tabs
+$nav-tabs-border-color: $secondary;
+$nav-tabs-link-hover-border-color: $secondary $secondary transparent;
+$nav-tabs-link-active-border-color: $secondary $secondary transparent;
+
 // Utilities
 $overflows: auto, hidden, scroll;
 
