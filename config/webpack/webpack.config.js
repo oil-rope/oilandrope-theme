@@ -33,13 +33,11 @@ const webpackConf = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader?configFile=tsconfig.webpack.json',
+        use: {
+          loader: 'babel-loader',
+        },
         exclude: /node_modules/,
       },
-      // {
-      //   test: /\.s?css$/,
-      //   use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      // },
       {
         test: /\.s?css$/,
         use: [

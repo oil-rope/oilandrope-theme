@@ -6,7 +6,6 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   errorOnDeprecated: true,
-  preset: 'ts-jest',
   testEnvironment: 'jsdom',
   moduleDirectories: [...defaults.moduleDirectories, 'src'],
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'scss', 'css'],

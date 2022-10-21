@@ -1,21 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ES3",
-    "lib": ["DOM", "ES2021"],
-    "jsx": "react",
+    "target": "ES5",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "ESNext",
-    "rootDir": ".",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
     "baseUrl": "src",
+    "outDir": "dist",
     "paths": {
       "@/*": ["./*"],
       "@Components/*": ["components/*"],
-      "@Icons/*": ["icons/*"],
-    },
-    "outDir": "./dist/",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "resolveJsonModule": true
-  }
+      "@Icons/*": ["icons/*"]
+    }
+  },
+  "include": ["src", "**/*.ts", "**/*.tsx"]
 }
