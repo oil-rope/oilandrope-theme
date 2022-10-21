@@ -1,52 +1,119 @@
 import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+
+const Form = () => {
+  return (
+    <form
+      action=""
+      method="get"
+      className="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-5 gy-4"
+    >
+      <div id="div_id_name" className="col">
+        <label htmlFor="id_name" className="form-label">
+          Name contains
+        </label>
+        <input type="text" name="name" id="id_name" className="form-control" />
+      </div>
+      <div id="div_id_summary" className="col">
+        <label htmlFor="id_summary" className="form-label">
+          Summary contains
+        </label>
+        <input
+          type="text"
+          name="summary"
+          id="id_summary"
+          className="form-control"
+        />
+      </div>
+      <div id="div_id_system" className="col">
+        <label htmlFor="id_system" className="form-label">
+          System
+        </label>
+        <select className="form-select" name="summary" id="id_summary">
+          <option value="">--------</option>
+          <option value="0">Pathfinder 1e</option>
+          <option value="1">Dungeons &amp; Dragons 3.5</option>
+        </select>
+      </div>
+      <div id="id_place" className="col">
+        <label htmlFor="id_place" className="form-label">
+          World name contains
+        </label>
+        <input
+          type="text"
+          name="place"
+          id="id_place"
+          className="form-control"
+        />
+      </div>
+      <div id="div_id_owner" className="col">
+        <label htmlFor="id_owner" className="form-label">
+          Owner name contains
+        </label>
+        <input
+          type="text"
+          name="owner"
+          id="id_owner"
+          className="form-control"
+        />
+      </div>
+      <div id="div_id_active" className="col align-self-sm-end">
+        <div className="form-check">
+          <input
+            type="checkbox"
+            className="form-check-input"
+            name="active"
+            id="id_active"
+            value=""
+          />
+          <label htmlFor="id_active" className="form-check-label">
+            Active
+          </label>
+          <div className="form-text" id="hint_id_active">
+            Search for active campaigns only
+          </div>
+        </div>
+      </div>
+      <div className="w-100 my-0"></div>
+      <div className="div_id_submit col-12">
+        <button type="submit" className="btn btn-primary me-3">
+          Search
+        </button>
+        <button type="reset" className="btn btn-dark">
+          Reset
+        </button>
+      </div>
+    </form>
+  );
+};
 
 const AccordionForm = () => {
   return (
-    <Accordion>
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>Advanced search</Accordion.Header>
-        <Accordion.Body>
-          <Form className="row row-cols-lg-auto align-items-center justify-content-between">
-            <Form.Group className="mb-3" controlId="nameContains">
-              <Form.Label>Name contains</Form.Label>
-              <Form.Control type="text" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="summaryContains">
-              <Form.Label>Summary contains</Form.Label>
-              <Form.Control type="text" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="system">
-              <Form.Label>Summary contains</Form.Label>
-              <Form.Select>
-                <option value="">---------</option>
-                <option value={0}>Pathfinder 1e</option>
-                <option value={1}>Dungeons &amp; Dragons 3.5</option>
-              </Form.Select>
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="worldNameContains">
-              <Form.Label>World&apos;s name contains</Form.Label>
-              <Form.Control type="text" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="isActive">
-              <Form.Check type="checkbox" label="Active" />
-            </Form.Group>
-            <div className="w-100"></div>
-            <Col>
-              <Button className="me-3" variant="primary" type="submit">
-                Search
-              </Button>
-              <Button variant="secondary" type="reset">
-                Reset
-              </Button>
-            </Col>
-          </Form>
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+    <div className="accordion" id="filterAccordion">
+      <div className="accordion-item">
+        <h2 className="accordion-header" id="filterHeading">
+          <button
+            className="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#filterCollapse"
+            aria-expanded="false"
+            aria-controls="filterCollapse"
+          >
+            Advanced Search
+          </button>
+        </h2>
+        <div
+          id="filterCollapse"
+          className="accordion-collapse collapse"
+          aria-labelledby="filterHeading"
+          data-bs-parent="#filterAccordion"
+        >
+          <div className="accordion-body">
+            <Form />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
