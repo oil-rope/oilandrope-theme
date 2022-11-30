@@ -11,7 +11,7 @@ const ColorPropTypes = {
 type ColorTypes = InferProps<typeof ColorPropTypes>;
 const Color: FC<ColorTypes> = ({ colorName, colorHex }) => {
   return (
-    <div className={`p-3 mb-3 bg-${colorName} fw-bold rounded`}>
+    <div className={`p-3 mb-3 bg-${colorName} fw-bold`}>
       {colorName.charAt(0).toUpperCase() + colorName.slice(1)}
       <br />
       <span className="small fw-light">{colorHex}</span>

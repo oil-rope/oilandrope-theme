@@ -27,7 +27,7 @@ $primary: $color-primary-0;
 $secondary: $color-secondary-1-0;
 $success: $color-complement-0;
 $info: $color-secondary-2-1;
-$extra: $color-complement-1;
+$extra: tint-color($color-complement-1, 30%);
 
 $extra-colors: (
   "extra": $extra,
@@ -38,11 +38,14 @@ $extra-colors: (
 $enable-rounded: true;
 $enable-shadows: false;
 $enable-gradients: false;
-$enable-cssgrid: true;
+$enable-grid-classes: true;
+$enable-button-pointers: true;
 $enable-rfs: true;
 $enable-smooth-scroll: true;
 
-// Body
+$border-radius: .25rem;
+
+  // Body
 $body-bg: #dedba7;
 
 // Types
@@ -83,18 +86,3 @@ $nav-tabs-link-active-border-color: $secondary $secondary transparent;
 
 // Utilities
 $overflows: auto, hidden, scroll;
-
-// Variables
-// NOTE: This work-around is needed in order to keep merge colors
-// NOTE: This will be fixed by Bootstrap v5.2.x
-// SEE: https://stackoverflow.com/questions/68755179/bootstrap-5-custom-theme-colors-not-updating-classes
-@import "~bootstrap/scss/variables";
-$theme-colors: map-merge($theme-colors, $extra-colors);
-
-// Typography
-$hr-margin-x: $spacer;
-
-// Buttons + Forms
-$custom-control-indicator-bg: $white;
-
-@import "~bootstrap/scss/maps";

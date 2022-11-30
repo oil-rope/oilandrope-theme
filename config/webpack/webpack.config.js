@@ -3,6 +3,7 @@ const path = require('path');
 
 const BASE_PATH = path.resolve(__dirname, '../../');
 const SOURCE_PATH = path.join(BASE_PATH, 'src/');
+const OUTPUT_PATH = path.join(BASE_PATH, 'dist/');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -17,16 +18,15 @@ const webpackConf = {
     chunkFilename: '[id].[contenthash].js',
     clean: true,
     filename: '[name].[contenthash].bundle.js',
-    path: path.resolve(BASE_PATH, 'dist'),
-    publicPath: '/',
+    path: OUTPUT_PATH,
+    publicPath: 'auto',
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: path.join(OUTPUT_PATH, 'index.html'),
+      publicPath: 'auto',
+      template: path.join(SOURCE_PATH, 'index.ejs'),
       title: 'Oil &amp; Rope Theme',
-      template: path.join(SOURCE_PATH, 'index.html'),
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'css/oilandrope.css',
     }),
   ],
   module: {
@@ -39,14 +39,18 @@ const webpackConf = {
         exclude: /node_modules/,
       },
       {
-        test: /\.s?css$/,
+        test: /\.(s?css)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            // Injects CSS using multiple `<style>`
+            loader: 'style-loader',
+          },
           {
             // Translate CSS into CommonJS modules
             loader: 'css-loader',
           },
           {
+            // This is required for Autoprefixer
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
@@ -55,17 +59,13 @@ const webpackConf = {
             },
           },
           {
+            // Compiles Sass/SCSS files into CSS
             loader: 'sass-loader',
-            options: {
-              sassOptions: {
-                outputStyle: 'compressed',
-              },
-            },
           },
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'img/[name][ext][query]',
@@ -96,6 +96,7 @@ const webpackConf = {
 };
 
 module.exports = (_env, argv) => {
+  webpackConf.plugins[0].userOptions.environment = argv.mode;
   if (argv.mode === 'development') {
     webpackConf.devtool = 'eval-source-map';
     webpackConf.output.filename = '[name].[contenthash].js';
@@ -103,20 +104,44 @@ module.exports = (_env, argv) => {
     webpackConf.performance.hints = false;
     webpackConf.optimization = { moduleIds: 'named' };
     webpackConf.devServer = {
-      historyApiFallback: true,
-      liveReload: true,
       client: {
         overlay: true,
       },
-      host: '127.0.0.1',
-      port: 8080,
-      open: true,
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET,OPTIONS',
       },
+      historyApiFallback: true,
+      host: '127.0.0.1',
+      hot: true,
+      liveReload: true,
+      open: true,
+      port: 8080,
+      static: OUTPUT_PATH,
       watchFiles: { paths: SOURCE_PATH },
     };
+  }
+  if (argv.mode === 'production') {
+    webpackConf.plugins = [
+      ...webpackConf.plugins,
+      new MiniCssExtractPlugin({
+        filename: 'css/oilandrope.css',
+      }),
+    ];
+    webpackConf.module.rules[1].use[0] = {
+      loader: MiniCssExtractPlugin.loader,
+    };
+    webpackConf.module.rules = [
+      {
+        mimetype: 'image/svg+xml',
+        scheme: 'data',
+        type: 'asset/resource',
+        generator: {
+          filename: 'icons/[hash].svg',
+        },
+      },
+      ...webpackConf.module.rules,
+    ];
   }
   return webpackConf;
 };

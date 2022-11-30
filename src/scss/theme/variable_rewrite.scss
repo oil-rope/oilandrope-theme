@@ -1,0 +1,8 @@
+// This file allows to rewrite some variables based on Bootstrap's
+// This is because this file it's (at least should be) imported after Bootstrap's variables
+
+// Typography
+$hr-margin-x: $spacer;
+
+// Buttons + Forms
+$custom-control-indicator-bg: $white;

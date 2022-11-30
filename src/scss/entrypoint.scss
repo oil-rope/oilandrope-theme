@@ -1,20 +1,29 @@
-// Configuration required
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "~bootstrap/scss/functions";
 
-// Custom variables
+// 2. Include any default variable overrides here
 @import "theme/variables";
 
-// Configuration extra
-// @import "~bootstrap/scss/variables";
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+@import "theme/variable_rewrite";
+@import "theme/maps";
+
+// 5. Include remainder of required parts
+@import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/utilities";
-
-// Layout & components
 @import "~bootstrap/scss/root";
-@import "~bootstrap/scss/reboot";
 
-// Custom types
-@import "theme/type";
+// 6. Optionally include any other parts as needed
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
 
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/containers";
@@ -45,15 +54,10 @@
 @import "~bootstrap/scss/offcanvas";
 @import "~bootstrap/scss/placeholders";
 
-// Helpers
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/helpers";
-
-// Utilities
-// Generation of classes based on Sass map in "_utilities.scss"
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "~bootstrap/scss/utilities/api";
 
-// Custom
+// 8. Add additional custom code here
 @import "theme/forms";
 @import "theme/type";
 @import "theme/background";
